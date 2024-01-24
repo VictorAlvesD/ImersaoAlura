@@ -8,8 +8,7 @@
 
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -20,53 +19,57 @@
                     <img src="./assets/icons/logo-spotify.png" alt="Logo do Spotify">
                 </a>
             </div>
-            <div>
-                <ul>
-                    <li>
-                        <a href="">
-                            <span><i class="fa-solid fa-home"></i></span>
-                            <span>Inicio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span><i class="fa-solid fa-search"></i></span>
-                            <span>Inicio</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <a href="">
+                        <span><i class="fa fa-home"></i></span>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span><i class="fa fa-search"></i></span>
+                        <span>Buscar</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
-        <nav class="sidebar__library">
-            <div class="topo">
-                <ul>
-                    <li>
-                        <a href="">
-                            <span><i class="fa-solid fa-book"></i></span>
-                            <span>Biblioteca</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="mais"><i class="fa-solid fa-plus"></i></span>
-                        </a>
-                    </li>
-                </ul>
+
+        <div class="library">
+            <div class="library__contet">
+                <button class="library__button">
+                    <span class="fa fas fa-book"></span>
+                    <span>Sua Biblioteca</span>
+                </button>
+                <span class="fa fa-plus"></span>
             </div>
-            <div class="meio">
-                <section class="playlists">
-                    <h3>Crie sua primeira playlist!</h3>
-                    <h4>É fácil, vamos te ajudar</h4>
-                    <button>Criar playlist</button>
-                </section>
-                <section class="podcasts">
-                    <h3>Que tal seguir um podcast novo?</h3>
-                    <h4>Avisaremos você sobre novos epsodios</h4>
-                    <button>Explore podcasts</button>
-                </section>
+
+
+            <section class="section-playlist">
+                <div class="section-playlist__content">
+                    <span class="text title">Crie sua primeira playlist!</span>
+                    <span class="text subtitle">É facil, vamos te ajudar.</span>
+                    <button class="section-playlist_button">
+                        <span>Criar playlist</span>
+                    </button>
+                </div>
+            </section>
+
+            <div class="cookies">
+                <a href="">Cookies</a>
             </div>
-        </nav>
+
+            <div class="linguages">
+                <button class="linguages__button">
+                    <span class="fa fa-globe"></span>
+                    <span>Português do Brasil</span>
+                </button>
+            </div>
+
+        </div>
+
     </div>
+
 </body>
 
 </html>
