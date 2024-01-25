@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    font-family: var(--font-dm-sans)
 }
 
 .sidebar {
@@ -43,7 +44,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
+    
 }
 
 .sidebar nav ul li a span {
@@ -83,7 +84,7 @@ body {
 
     font-size: 14px;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
+    
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -126,7 +127,7 @@ body {
 .section-playlist__content .text {
     padding-bottom: 14px;
     color: #fff;
-    font-family: "DM Sans", sans-serif;
+    
 }
 
 .section-playlist__content .text.title {
@@ -152,7 +153,7 @@ body {
     font-size: 10px;
     font-weight: 700;
     color: black;
-    font-family: "DM Sans", sans-serif;
+    
 
     text-decoration: none;
     text-transform: none;
@@ -192,50 +193,41 @@ body {
 }
 
 /* Footer */
-.footer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 3px 20px;
-
+.disclaimer-premium {
     position: fixed;
     bottom: 0;
-    width: 100%;
-
-    background: linear-gradient(to right, #AC2A97, #509AF3);
-    
-}
-
-.footer .footer__mensage {
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
     display: flex;
-    flex-direction: column;
-    font-family: "DM Sans", sans-serif;
-    padding: 20px;
-    gap: 12px;
-    color: #fff;
+    justify-content: space-between;
+}
+.disclaimer-premium .text {
+   flex-shrink: 0;
+}
+.disclaimer-premium .disclaimer-premium__title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
-.footer .footer__mensage .text.title{
+.disclaimer-premium .disclaimer-premium__subtitle {
+    color: #ffffff;
     font-size: 14px;
     font-weight: 500;
 }
 
-.footer .footer__mensage .text.subtitle{
-    font-size: 13px;
-}
-
-.footer .footer__button {
-    background-color: #fff;
-    border-radius: 20px;
-    width: 200px;
-    padding: 10px 20px;
-    margin-top: 20px;
-
-    cursor: pointer;
-}
-.footer .footer__button .text{
-    color: #121212;
+.disclaimer-premium button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 15px;
-    margin-right: 15px;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
