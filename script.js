@@ -1,21 +1,10 @@
-//BOM DIA | BOA TARDE | BOA NOITE
-
-// Obtém a referência do elemento com o ID "greeting"
+// Obtém o elemento HTML com o ID "greeting"
 const greetingElement = document.getElementById("greeting");
 
 // Obtém a hora atual do sistema
 const currentHour = new Date().getHours();
 
-// Define a saudação com base na hora atual
-// if (currentHour >= 5 && currentHour < 12) {
-//   greetingElement.textContent = "Bom dia";
-// } else if (currentHour >= 12 && currentHour < 18) {
-//   greetingElement.textContent = "Boa tarde";
-// } else {
-//   greetingElement.textContent = "Boa noite";
-// }
-
-// Forma mais simples
+// Define a mensagem de saudação com base na hora atual
 const greetingMessage =
   currentHour >= 5 && currentHour < 12
     ? "Bom dia"
@@ -23,20 +12,26 @@ const greetingMessage =
     ? "Boa tarde"
     : "Boa noite";
 
+// Define o texto da saudação no elemento HTML
 greetingElement.textContent = greetingMessage;
 
-// GRID INTELIGENTE
+// Obtém o elemento HTML com a classe "offer__list-item"
 const container = document.querySelector(".offer__list-item");
 
-const observer = new ResizeObserver(() => {  //mudanças no tamanho do elemento 
-  const containerWidth = container.offsetWidth; //largura total do elemento, incluindo largura do conteúdo, bordas e preenchimento.
-  const numColumns = Math.floor(containerWidth / 200); //número de colunas com base na largura do container
+// Cria um observador de redimensionamento para o elemento HTML
+const observer = new ResizeObserver(() => {
+  // Obtém a largura atual do contêiner
+  const containerWidth = container.offsetWidth;
 
-  //largura mínima de 200px e máxima de 1fr (uma fração do espaço disponível).
+  // Calcula o número de colunas com base na largura do contêiner e largura mínima de 200px
+  const numColumns = Math.floor(containerWidth / 200);
+
+  // Define a estrutura de grade do contêiner com base no número de colunas calculado
   container.style.gridTemplateColumns = `repeat(${numColumns}, minmax(200px, 1fr))`;
 
-  console.log({ container });
-  console.log({ numColumns });
+  // Exibe informações de depuração no console sobre o contêiner e o número de colunas
+  console.log({ container, numColumns });
 });
-//observando a mudança do elemento
+
+// Observa as mudanças no tamanho do contêiner e aciona o callback do observador
 observer.observe(container);
